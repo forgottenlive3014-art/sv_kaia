@@ -326,6 +326,7 @@ INSERT INTO promociones (nombre, descripcion, descuento, fecha_inicio, fecha_fin
 ('Y2K WEEK', '15% de descuento en toda la colección Y2K', 15, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 30 DAY), 'activa'),
 ('ENVÍO GRATIS', 'Envío gratis en compras mayores a $40', 0, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 60 DAY), 'activa');
 
--- IMPORTANTE: después de importar, registra el admin desde /registro.php
--- y luego ejecuta:
--- UPDATE usuarios SET rol='admin' WHERE correo='tu_correo@dominio.com';
+-- Acceso inicial: admin@kaia.sv / w4XhqTUI6PpMNZDMEvpBEI26
+-- Cambia la contraseña después del primer inicio de sesión.
+INSERT INTO usuarios (nombre, correo, password, rol) VALUES
+('Administrador KAIA', 'admin@kaia.sv', '$2y$10$OX/Cd6jEzx1D/Yaxz.IpA.oWk25yuDJAECfl5QUjNBQNtY8Lz/BRC', 'admin');
